@@ -1,0 +1,129 @@
+/**
+ * Allows text inputs to display a placeholder message until it gets focus, at which point the input
+ * is set to empty.
+ *
+ * This simulated the placeholder attribute in html5.
+ * http://dev.w3.org/html5/spec/Overview.html#the-placeholder-attribute
+ *
+ * @copyright Clock Limited 2010
+ * @license http://opensource.org/licenses/bsd-license.php New BSD License
+ * @author Paul Serby <paul.serby@clock.co.uk>
+ */
+(function ($) {
+  $.fn.placeholder = function (text) {
+
+  return this.each(function () {
+
+      var
+        context = $(this),
+        placeholderText,
+        nativePlaceholderSupport = ('placeholder' in document.createElement('input'));
+
+      function onBlur(event) {
+        checkIfEmpty($(event.target));
+      }
+
+      function checkIfEmpty() {
+        if (context.val() === '') {
+          if (context.attr('type') === 'password') {
+            try {
+              context.attr('type', 'text');
+            } catch(e) {
+              return false;
+            }
+          }
+          context.val(placeholderText);
+          context.addClass('ui-placeholder');
+        }
+      }
+
+      function onFocus(event) {
+        context.removeClass('ui-placeholder');
+        if (context.val() === placeholderText) {
+          context.val('');
+        }
+      }
+
+      if (text === undefined) {
+        placeholderText = $(this).attr('placeholder');
+      } else {
+        placeholderText = text;
+      }
+
+      if (!nativePlaceholderSupport) {
+        checkIfEmpty(context.blur(onBlur).focus(onFocus));
+        context.parents('form').submit(function(event) {
+          if (context.val() === placeholderText) {
+            context.val('');
+          }
+        });
+      } else {
+        context.attr('placeholder', placeholderText);
+      }
+    });
+  };
+})(jQuery);
+
+
+
+
+$(document).ready(function(){
+    $('[name="country"]').on('change', function() {
+        var geoKey = $(this).find('option:selected').val();
+        var data = $jsonData.prices[geoKey];
+        var price = data.price;
+        var origPrice = price * 10;
+        var oldPrice = data.old_price;
+        var currency = data.currency
+        $("[value = "+geoKey+"]").attr("selected", true).siblings().attr('selected', false);
+
+        $('.price_land_s1').text(price);
+        $('.price_land_s2').text(oldPrice);
+        $('.price_land_curr').text(currency);
+    });
+
+    initializeClock('countdown_dashboard', deadline);
+    initializeClock('countdown_dashboard_2', deadline);
+});
+$(document).ready(function () {
+    /*Мягкий скролинг до якоря */
+
+    $('.scrollTo').click( function(){
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+            //$(scroll_el).find("[name='name']").focus();
+        }
+        return false;
+    });
+
+    lastpack(20);
+
+});
+
+
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ))
+    return matches ? decodeURIComponent(matches[1]) : undefined
+}
+
+function lastpack(numpack) {
+    var minNumPack = 6;
+    var lastClass = $('.lastpack');
+    var numpackCookie = getCookie("lastpack");
+    if(numpackCookie == undefined) {
+        document.cookie = numpack;
+    } else {
+        var numpack =  numpackCookie;
+    }
+    if (numpack > minNumPack) {
+        numpack--;
+        document.cookie = "lastpack="+numpack;
+        lastClass.text(numpack);   
+    } else {
+        lastClass.text(minNumPack);
+    }
+    setTimeout(lastpack, 20000, numpack);
+}

@@ -1,0 +1,19 @@
+ 
+.slider-wrap{width:100%;margin:0 auto;overflow:hidden;position:relative;}
+.slider-wrap h2{font:700 19px/22px 'Roboto';text-align:center;padding-top:25px;padding-bottom:25px;color:#2a2a42;}
+.slider-item{width:100%;text-align:center;}
+.slider-img{width:100%;height:208px;display:block;margin:0 auto 0 auto;}
+.slider-img img{display:block;margin:0 auto;}
+.slider-text{margin-top:28px;}
+.slider-text h4{font:700 17px/18px 'Roboto';margin-bottom:10px;}
+.slider-text p{font:400 15px/18px 'Roboto';color:#404040;}
+.slick-dots li{width:13px;height:13px;margin:0 5px 0 0;}
+.slick-dots li button{width:13px;height:13px;padding:0;}
+.slick-dots li button::before{font-size:13px;color:rgb(225, 225, 225);width:13px;height:13px;opacity:1;}
+.slick-dots li.slick-active button:before{color:rgb(42, 42, 66);opacity:1;}
+.slider-arrow{width:10px;height:17px;background:url("img/arrow_static.png") no-repeat;position:absolute;top:45%;z-index:99;}
+.prev-btn, .prev-btn-rev{left:1px;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.next-btn, .next-btn-rev{right:0;}
+.next-btn:hover, .next-btn-rev:hover,
+.prev-btn:hover, .prev-btn-rev:hover{background:url("img/arrow_hover.png") no-repeat;}
+ 

@@ -1,0 +1,673 @@
+<!doctype html>
+<html>
+ 
+ <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<head>
+	<meta charset="utf-8">
+	<title>Andrea</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="l4/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>	
+	<link rel="stylesheet" media="all" href="l4/css/style.css" >	
+	<style>
+		@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),local('sans-serif-medium'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4AMP6lbBP.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4AMP6lbBP.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),local('sans-serif'),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRc335fh4DolH3.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF6,U+1CF8-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FB}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRfH35fh4DolH3.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Rozha One';font-style:normal;font-weight:400;src:local('Rozha One Regular'),local('RozhaOne-Regular'),url(https://fonts.gstatic.com/s/rozhaone/v4/AlZy_zVFtYP12Zncg2kRcn35fh4Dog.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+	</style>
+	<style>
+		.footer{
+			background: #EAEAEA !important;
+		}	
+	</style>
+	
+<!-- Facebook Pixel Code -->
+<script>
+ !function(f,b,e,v,n,t,s)
+ {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+ n.queue=[];t=b.createElement(e);t.async=!0;
+ t.src=v;s=b.getElementsByTagName(e)[0];
+ s.parentNode.insertBefore(t,s)}(window, document,'script',
+ 'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '2006856192682471');
+ fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+ src="https://www.facebook.com/tr?id=2006856192682471&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --> 
+
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122876136-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122876136-1');
+</script>
+
+</head>
+<body onload="gtag('event', 'click', {'event_category': 'version4','event_label': 'version4'});">
+ <script>
+ function conv10sec(){
+     fbq('track', 'And_conv10sec');
+   }
+ function conv5sec(){
+   fbq('track', 'And_conv5sec');
+   }
+   setTimeout(conv5sec,5000);
+   setTimeout(conv10sec,10000);
+   
+</script>
+<!-- BEGIN  out-->
+<div  class="navbar" style="display: none;">	
+	<div class="navbar-contain container">	
+		<a href="#innovazione" class="navbar-logo js-link"><span class="navbar-logo__ico"></span></a>	
+		<ul id="fixed-nav" class="navbar-menu">
+			<li class="navbar__item"><a class="js-link" href="#innovazione">Główna </a></li>
+			<li class="navbar__item"><a class="js-link" href="#ingredients">Skład</a></li>
+			<li class="navbar__item"><a class="js-link" href="#comments">Komentarze </a></li>
+			<li class="navbar__item"><a class="js-link" href="#steps">Dostawa</a></li>	
+		</ul>	
+		<a href="#order-form" class="navbar__button button-wrap button-wrap_sm js-to-form"><span  class="button button_sm">Kupić<i class="arrow"></i></span></a>	
+	</div>
+</div>
+<!-- END  out-->
+<!-- BEGIN  out-->
+<div class="out">
+<!-- BEGIN  Banner-->	
+	 <div class="show-btn " id="js-red-btn" style="display: none;">
+	        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+	        <circle style="fill:#FF0404;" cx="22.5" cy="22.5" r="22.5"/>
+	        <polygon style="fill:#FFFFFF;" points="28,12.1 13,22 28,32 "/>
+	    </svg>
+	    </div>
+	 <!-- HurryUp block -->
+	    <div class="hurryUp" id="hurryUp" style="display: none;">
+	        <span class="hurryUp__close"></span>
+	        <div class="hurryUp-left hurryUp__text">
+	            Nie przegap okazji do zakupu
+	            <b>Hairise z maksymalną zniżką!</b>
+	        </div>
+	        <div class="hurryUp-right hurryUp__text">
+	            <b class="hurryUp__text-bold">Pośpiesz się!</b>
+	            <span class="hurryUp__text-desc">Oferta jest ograniczona</span>       
+	            <div class="counter js-countdown">
+	                <span class="counter__elem counter__elem1 js-count-digit">0</span>
+	                <span class="counter__elem js-count-digit">0</span>
+	                <span class="counter__elem js-count-digit">0</span>
+	            </div>
+	        </div>
+	    </div>
+	<!-- END: HurryUp block -->
+<!-- END Banner-->
+<!-- BEGIN  innovazione-->
+	<section id="innovazione" class="innovazione">
+		<div class="innovazione-top">	
+			<div class="container innovazione-wrap">
+				<div class="innovazione-left">
+					<div class="innovazione-title">
+						<h2>Andrea Essence<br> INNOVATIONS 
+							<span class="innovazione-title_pos">
+								 2018 
+								 <span>
+								 	in the fight with alopecia					 	
+								 </span>
+							</span>
+						</h2>
+					</div>
+					<img class="innovazione__product" src="l4/img/product.png" alt="product">
+					<div class="innovazione-list">
+						<ul >
+							<li class="innovazione-list__item">
+								Thick beard and mustache			
+							</li>
+							<li class="innovazione-list__item">
+								Strong and healthy hair					
+							</li>
+							<li class="innovazione-list__item innovazione-list__item-last">	 	
+								Get rid of alopecia							
+							</li>
+						</ul>
+						<img  src="l4/img/innovazione-img.png" alt="">
+					</div>
+				</div>			
+				 		
+			</div>
+		</div>
+		<div class="innovazione-bottom" style="display: none;">		
+			<div class="innovazione-counter" >					
+				<div class="container">
+					<span class="innovazione-counter__text">
+						Left the goods at a discount								
+					</span>
+					<div class="counter js-countdown">
+		                <span class="counter__elem counter__elem1 js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		                <span class="counter__elem js-count-digit">0</span>
+		            </div>
+	        	</div>
+			</div>	
+		</div>
+	</section>
+<!-- END  innovazione-->
+<!-- BEGIN  causes-->
+	<section class="causes">
+		<div class="container">
+			<h3 class="causes-title">
+				Continuous stress and development of complexes due to lack of hair?
+			</h3>
+			<div class="causes-list causes-left">
+				<div class="causes-item causes-item1">
+					Fear of surgery
+				</div>
+				<div class="causes-item causes-item2">
+					Low self-esteem
+				</div>
+				<div class="causes-item causes-item3">
+					Condemnation of others
+				</div>
+			</div>
+			<div class="causes-list causes-right">
+				<div class="causes-item causes-item4">
+					Brak brody
+				</div>
+				<div class="causes-item causes-item5">
+					Hair loss on the head
+				</div>
+				<div class="causes-item causes-item6">
+					<div class="causes-popup">
+						<div class="causes-popup__btn btn-throbbing">
+							<div class="btn-throbbing-shadow">
+								<div class="btn-throbbing__img js-img"></div>
+							</div>
+							<div class="btn-throbbing-border">
+							</div>					
+						</div>
+						<div class="causes-popup__block">
+							Hair follicles are in sleep mode and require a strong natural activation.
+
+
+
+							<span class="causes-popup__ico js-close"></span>
+						</div>	
+					</div>		
+					<span class="causes-text">
+							Sleeping hair follicles
+					</span>
+									
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  causes-->
+<!-- BEGIN  tape-first-->
+	<section class="tape-first">
+		<div class="container">		
+			<h3 class="tape-first-title">
+				Hair on the face and head are attributes of the real man.						
+			</h3>		
+		</div>	
+		<img src="l4/img/tape-first-img.png" alt="">	
+	</section>
+	
+<!-- END  tape-first-->
+<!-- BEGIN  descript-->
+	<section class="descript">
+		<div class="container">
+			<h3 class="descript-title">
+				Hairiness will restore your masculinity!
+			</h3>
+			<img class="descript__product" src="l4/img/product.png" alt="product">
+			<div class="descript-right">
+				<ul class="descript-list">
+					<li class="descript__item">
+						<h6>Natural composition</h6>
+						A unique complex of natural ingredients
+					</li>
+					<li class="descript__item">
+						<h6>Powerful work</h6>
+						Activates dormant hair follicles
+					</li>
+					<li class="descript__item">
+						<h6>Quick help</h6>
+						
+Accelerates the growth of hair on the head and face
+					</li>
+					<li class="descript__item">
+						<h6>Long-term effect</h6>					
+This eliminates the cause of alopecia
+					</li>
+					<li class="descript__item">
+						<h6>Great result</h6>
+						
+He supports the growth of strong healthy hair
+					</li>
+				</ul>
+				<ul class="descript-icons">
+					<li class="descript__ico1"></li>
+					<li class="descript__ico2"></li>
+					<li class="descript__ico3"></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+<!-- END  descript-->
+<!-- BEGIN  ingredients-->
+	<section id="ingredients" class="ingredients">
+		<div class="container">
+			<h3 class="ingredients-title">
+				
+			</h3>
+
+			<div class="content">
+			 <section class="component-content">
+            <div class="container">
+                <div class="slider-wrap">
+                    <h2>Andrea - the strength of natural ingredients</h2>
+                    <a href="javascript:void(0)" class="prev-btn slider-arrow"></a>
+                    <a href="javascript:void(0)" class="next-btn slider-arrow"></a>
+                    <div class="slider">
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_1.png" alt="Oil drop">
+                            </div>
+                            <div class="slider-text">
+                                <h4>keratin </h4>
+                                <p>Supplements the deficiency of natural keratin in the stratum corneum, eliminates their dryness, fragility and fineness</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_2.png" alt="Vitamina A and E">
+                            </div>
+                            <div class="slider-text">
+                                <h4>Vitamins A, E</h4>
+                                <p>Nourish and moisturize the hair structure, support their strengthening and thickening, normalize the blood circulation in the skin</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_3.png" alt="Vitamina B">
+                            </div>
+                            <div class="slider-text">
+                                <h4>Vitamins B (biotin and niacin)</h4>
+                                <p>Heals and stimulates hair growth, gives them a healthy appearance</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_4.png" alt="Vitamina B">
+                            </div>
+                            <div class="slider-text">
+                                <h4>Cinnamon oil</h4>
+                                <p>The awakening and revitalization of hair follicles, the cessation of hair loss and the activation of hair growth</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_5.png" alt="Vitamina B">
+                            </div>
+                            <div class="slider-text">
+                                <h4>Coconut oil</h4>
+                                <p>It penetrates deep into the hair and strengthens its core, prevents damage and brittleness</p>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-img">
+                                <img src="l4/img/img_6.png" alt="Vitamina B" style="width: 100%">
+                            </div>
+                            <div class="slider-text">
+                                <h4>Extracts of chamomile and nettle</h4>
+                                <p>They improve the circulation of hair follicles, promote the growth of smooth and silky hair</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+		</div>
+	</section>
+<!-- END  ingredients-->
+<!-- BEGIN  comments-->
+	<section id="comments" class="comments">
+		<div class="container">
+			<h3 class="comments-title">
+				What customers say about Andrea
+			</h3>
+			<div class="comments-list">
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-1"></div>
+					<h5>Stephen </h5>
+					<p>
+						
+As far as I remember myself, my beard never grew. I've tried many resources, including drops, oils, minoxidil. But I was helped only by a natural hair spray.
+					</p>
+				</div>
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-2"></div>
+					<h5>Kuang </h5>
+					<p>
+						
+I started balding five years ago. I lost my self-esteem, I still felt uncomfortable. I was thinking about hair transplant until I used Hairise Spray. Rate my results!
+					</p>
+				</div>
+				<div class="comments-item">
+					<div class="comments-item__img comments-item__img-3"></div>
+					<h5>Andre </h5>
+					<p>
+						
+I wanted to grow a beard, but I could not get the right length. I used oils, drops, but the Hairise spray is absorbed much faster and really helps. See for yourself!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  comments--> 	
+<!-- BEGIN  tape-last-->
+	<section class="tape-last">
+		<img class="tape-last__img2" src="l4/img/tape-last-img1.png" alt="">	
+		<div class="container">
+			<h3 class="tape-last-title">
+				<span class="tape-last-title_big">98%</span>			
+					positive <br>feedback!					
+			</h3>
+		</div>
+		<img class="tape-last__img1" src="l4/img/tape-last-img2.png" alt="">	
+	</section>
+<!-- END  tape-last--> 		
+<!-- BEGIN  expert--> 		
+	<section class="expert">
+		<div class="container">
+			<div class="expert-right">
+				<h3 class="expert-title">
+					The experts <br>
+recommend Andrea
+				</h3>
+				<div class="expert__name expert__name-sm">
+					<strong>
+						Baptist Rover
+
+					</strong>
+					<p>
+						
+Hairdresser, specialist in hair restoration
+
+					</p>
+				</div>
+				<div class="expert-content">
+					<p>
+						"Previously, experts around the world recommended injecting steroids, hair transplant to clients with hair loss. In 2018, these funds give way to natural oils and plant extracts.
+
+					</p>
+					<p>
+						The right ingredients are effectively combined in a new strong hair exciter, a natural hair spray. Plant extracts contribute to the production of the male hormone, and the oils open the hair follicles for saturation with vitamins A and E, biotin and keratin. Proper blood supply to the hair follicles accelerates the growth of strong and healthy hair. I recommend Hairise to all my customers! "
+					</p>			
+				</div>
+				<div class="expert__name">
+					<strong>
+						Baptiste Rover
+					</strong>
+					<p>
+						Hairdresser, specialist in hair restoration
+
+
+
+
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- END  expert--> 		
+<!-- BEGIN  steps--> 		
+	<section id="steps" class="steps">
+		<div class="container">
+			<h3 class="steps-title">
+				4 simple steps to thick hair and beard
+			</h3>
+			<ul class="steps-list">
+				<li class="steps-item steps-item-1">
+					 
+					<p>Fill out the form on the website with your name and phone number</p>
+				</li>
+				<li class="steps-item steps-item-2">
+					 
+					<p>The operator will call you back and provide you with shipping information</p>
+				</li>
+				<li class="steps-item steps-item-3">
+					 
+					<p>Pay the courier after receiving the goods</p>
+				</li>
+				<li class="steps-item steps-item-4">
+					 
+					<p>Use a spray, enjoy thick hair</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- END  steps--> 
+<!-- BEGIN  innovazione-bottom--> 		
+	<section id="innovazione-bottom" class="innovazione">
+		<div class="innovazione-top">	
+			<div class="container innovazione-wrap">
+				<div class="innovazione-left">
+					<div class="innovazione-title">
+						<h2>Andrea Essence<br> INNOVATIONS 
+							<span class="innovazione-title_pos">
+								 2018 
+								 <span>
+								 	in the fight with alopecia					 	
+								 </span>
+							</span>
+						</h2>
+					</div>
+					<img class="innovazione__product" src="l4/img/product.png" alt="product">
+					<div class="innovazione-list">
+						<ul >
+							<li class="innovazione-list__item">
+								Thick beard and mustache			
+							</li>
+							<li class="innovazione-list__item">
+								Strong and healthy hair					
+							</li>
+							<li class="innovazione-list__item innovazione-list__item-last">	 	
+								Get rid of alopecia							
+							</li>
+						</ul>
+						<img  src="l4/img/innovazione-img.png" alt="">
+					</div>
+				</div>
+				<div class="innovazione-right">
+					 
+		
+					 
+				</div>		
+			</div>
+		</div>
+		 	
+	</section>
+<!-- END  innovazione-bottom--> 
+
+			
+<div class=fon6>
+<div class=center>
+<div class=forma id=forma>
+<form class=p2 action="https://andreaessence.club/thanks/"  >
+<p class=formtext1>order now</p>
+<p class=formtext2>
+</p>
+<div class="ampstart-input inline-block relative m0 p0 mb3">
+<input class="block border-none p0 m0" name=name placeholder=Name... required>
+</div>
+<div class="ampstart-input inline-block relative m0 p0 mb3"> <input type="number" class="block border-none p0 m0" name=phone placeholder=Phone... required>
+</div><div class="ampstart-input inline-block relative m0 p0 mb3">
+<label for=city class=formtext3>Emirate/City</label><div></div>
+<label for=city class=formtext4>Delivery address: Emirate
+
+ <input class="block border-none p0 m0" name=city placeholder=Eg.Dubai required>
+</div><div class="ampstart-input inline-block relative m0 p0 mb3">
+<label for=adress1 class=formtext3>Area/Street</label><div></div>
+<label for=adress1 class=formtext4>Delivery address: Area/street</label>
+<input class="block border-none p0 m0" name=adress1 placeholder="Eg.Deira, Al Rigga" required>
+</div><div class="ampstart-input inline-block relative m0 p0 mb3">
+<label for=building1 class=formtext3>Building/Villa number</label><div></div>
+<label for=building1 class=formtext4>Delivery address: Building/Villa name
+</label>
+<input class="block border-none p0 m0" name=building1 placeholder="Al Mankool Building" required>
+</div>
+<div class="ampstart-input inline-block relative m0 p0 mb3">
+<label for=adress2 class=formtext3>Apartment/Office/villa number</label><div></div>
+<label for=adress2 class=formtext4>Delivery address: Apartment/office/villa
+</label>
+<input class="block border-none p0 m0" name=adress2 placeholder="Eg. Apartment 1201" required>
+</div>
+<div class="ampstart-input inline-block relative mb3">
+<label for=cars class="absolute top-0 right-0 bottom-0 left-0 formtext3">Order Quantity</label>
+<select name=quantity id=cars>
+<option value=1>1 for AED 110</option>
+<option value=2>2 for AED 199</option>
+<option value=3>3 for AED 250</option>
+<option value=4>4 for AED 299</option>
+</select>
+</div>
+<div class=formtext3 style="margin:20px auto; padding:20px;">
+While giving us your delivery address kindly consider that normal delivery timing is 9am-6pm, so please make sure that you or someone else will be available in that location to receive order. Payment will be Cash on Delivery. Our couriers will contact you to schedule delivery time and date
+</div>
+
+
+<input type="hidden" class="aff_sub1"   name="affsub1" value="" >
+<input type="hidden"  class="aff_sub2"  name="affsub2" value=""   >
+<input type="hidden" class="aff_sub3"   name="affsub3" value=""   >
+<input type="hidden" class="aff_sub4"   name="affsub4"  value=""  >
+<input type="hidden"  class="aff_sub5"  name="affsub5"  value=""  >
+<input type="hidden"  class="cid"  name="cid"  value=""  >
+<input type="hidden"  class="best"  name="best"  value=""  >
+ <input type="hidden"  class="version"  name="version"  value="version4"  >
+
+
+
+
+<input type=submit value="Order Now" style="background: black; border:0px;color:white; text-transform: uppercase;">
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+
+</div>
+<!-- END out-->
+
+ <link rel="stylesheet" href="l4/css/slick.css">
+    <link rel="stylesheet" href="l4/css/slick-theme.css">
+ 
+ 
+<link rel="stylesheet" href="l4/style.css">
+<!--
+<script src="l4/js/app.js"></script>
+-->
+<script src="l4/js/app.js"></script>
+
+<script type="text/javascript" src="l4/script_land.js" defer></script>
+
+<script type="text/javascript" src="l4/js/jquery-1.11.1.js"></script>
+
+<script src="l4/js/slick.min.js" type="text/javascript"></script>
+<script src="l4/js/main.js"></script>
+
+<script src="l4/js/common.js"></script>
+<link rel="stylesheet" href="l4/css/style.css">
+<style type="text/css">
+	.component-content{
+		background: none;
+	}
+	.slider-text,.slider-text p,.slider-wrap h2{
+		color:white;
+	}
+	.slick-dots li.slick-active button:before{
+		 
+		opacity: 0;
+	}
+	.slick-dots {
+		display: none!important;
+	}
+
+
+	.formtext1{font-size:24px; color:rgb(0, 0, 0);font-weight:bold;text-transform:uppercase;line-height:1.429;text-align:center;}
+.formtext3{font-weight:300;color:#222;font-size:18px;font-weight:600; margin-left:21px;}
+.formtext4{font-weight:300;color:#222;font-size:12px;font-weight:400; margin-left:21px;}
+.f8block{max-width:396px;width:90%;background:#f4bb00;float:right;margin-bottom:20px;}
+form.amp-form-submit-success [submit-success],
+form.amp-form-submit-error [submit-error]{margin-top:16px;}
+form.amp-form-submit-success [submit-success]{color:green;}
+form.amp-form-submit-error [submit-error]{color:red;}
+form.amp-form-submit-success.hide-inputs > input{display:none;}
+form input, select{width:90%;margin:10px auto;display:block;height:57px;border:0px;font-size:18px;text-indent:20px;}
+.buttonlast{color:#ffffff;background-color:#222222;width:90%;height:50px;padding-right:30px;padding-left:30px;text-align:center;border:0 none;font-size:16px;font-weight:700;white-space:nowrap;background-image:none;cursor:pointer;margin:30 auto;}
+.forma{background:rgb(199, 170, 104);padding:20px;}
+.fon6{background-position:center;background-repeat:no-repeat;background-size:cover;}
+.innovazione-bottom {
+    min-height: 0px;
+    padding-bottom: 20px;
+    position: relative;
+    background: #a3743c;
+}
+.innovazione {min-height: auto;}
+
+@media only screen and (max-width: 767px){
+	.comments-list {
+	  
+	    flex-flow: row wrap;
+	}
+
+	.comments-item{
+		margin: 20px 0px;
+	}
+}
+</style>
+
+
+ <script type="text/javascript">
+     
+ function getURLParameter(name) {
+        return decodeURI(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+        );
+    }
+
+ gart=getURLParameter('adid');
+ gart1=getURLParameter('adsetname');
+ gart2=getURLParameter('age');
+ gart3=getURLParameter('gender');
+ gart4=getURLParameter('placement');
+ cid=getURLParameter('clickid');
+ best=getURLParameter('best');
+ 
+$(document).ready(function() {
+    
+     $(".aff_sub1").val(gart);
+     $(".aff_sub2").val(gart1);
+     $(".aff_sub3").val(gart2);
+     $(".aff_sub4").val(gart3);
+     $(".aff_sub5").val(gart4);
+     $(".cid").val(cid);
+     $(".best").val(best);
+     
+    
+
+});
+
+ </script>
+
+
+
+
+</body>
+
+ 
+</html>
